@@ -15,7 +15,7 @@ imgs = action.load_imgs()
 pyautogui.PAUSE = 0.1
 start_time = time.time()
 print('此脚本受益于 Github YYS-master。但好像这个项目不见了\n')
-print('脚本仅用作学习和个人娱乐,源码等整理好了可能会上传GitHub。联系邮箱:zhaobangliuagl@gmail.com\n')
+print('脚本仅用作学习和个人娱乐。联系邮箱:zhaobangliuagl@gmail.com\n')
 print('程序启动,现在时间', time.ctime())
 def enum_cb(hwnd, results):
     winlist.append((hwnd, win32gui.GetWindowText(hwnd)))
