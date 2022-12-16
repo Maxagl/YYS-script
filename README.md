@@ -11,11 +11,17 @@
 
 ## 环境
 keyboard              0.13.5
+
 numpy                 1.23.5
+
 opencv-contrib-python 4.6.0.66
+
 opencv-python         4.6.0.66
+
 Pillow                9.3.0
+
 PyAutoGUI             0.9.53
+
 pywin32               305
 
 ## 注意事项
