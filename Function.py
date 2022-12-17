@@ -898,7 +898,21 @@ class Daily:
             pts = action.locate_matchTemplate(screen, want, 0)
             if not len(pts) == 0:
                 CtrInacWindow.click_inactive_window(hwnd, pts)
-
+            screen = CtrInacWindow.capture_inactive_window(hwnd)
+            screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+            want = imgs['zhunbei']
+            pts = action.locate_matchTemplate(screen, want, 0)
+            if not len(pts) == 0:
+                print("准备按钮")
+                posi_1 = []
+                posi_1.append(pts[0] + bbox[0])
+                posi_1.append(pts[1] + bbox[1])
+                zhunbei = action.cheat(posi_1, 10, 10)
+                time.sleep(1)
+                CtrInacWindow.click_inactive_window(hwnd, zhunbei)
+                print("准备完毕")
+                time.sleep(7) # 自动战斗期间休息， 御灵设置为7秒
+                continue
 
             for i in ['dianjijixu', 'jiangli']:
                 want = imgs[i]
@@ -933,9 +947,21 @@ class Daily:
             # cv2.waitKey()
             if not len(pts) == 0:
                 CtrInacWindow.click_inactive_window(hwnd, pts)
-
-
-
+            screen = CtrInacWindow.capture_inactive_window(hwnd)
+            screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+            want = imgs['zhunbei']
+            pts = action.locate_matchTemplate(screen, want, 0)
+            if not len(pts) == 0:
+                print("准备按钮")
+                posi_1 = []
+                posi_1.append(pts[0] + bbox[0])
+                posi_1.append(pts[1] + bbox[1])
+                zhunbei = action.cheat(posi_1, 10, 10)
+                time.sleep(1)
+                CtrInacWindow.click_inactive_window(hwnd, zhunbei)
+                print("准备完毕")  
+                time.sleep(3) # 自动战斗期间休息， 觉醒设置为3秒
+                continue
             for i in ['dianjijixu', 'jiangli']:
                 want = imgs[i]
                 target = screen

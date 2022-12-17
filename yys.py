@@ -58,34 +58,14 @@ def choose_menu(raw, agent):
         
         t2.join()
         t1.join()
-        
     elif index == 6:
-        t1 = threading.Thread(target=daily1.jinbi_fighter, args=())
-        t2 = threading.Thread(target=daily2.jinbi_driver, args=())
-        t1.start()
-        t2.start()
-
-        t1.join()
-        t2.join()
-    elif index == 7:
-        t1 = threading.Thread(target=daily1.huntu_fighter, args=())
-        t2 = threading.Thread(target=daily2.huntu_fighter, args=())
-        t3 = threading.Thread(target=daily3.huntu_driver, args=())
-        t1.start()
-        t2.start()
-        t3.start()
-
-        t1.join()
-        t2.join()
-        t3.join()
-    elif index == 8:
         if agent == 1:
             daily1.yuling()
         elif agent == 2:
             daily2.yuling()
         elif agent == 3:
             daily3.yuling()     
-    elif index == 9:
+    elif index == 7:
         if agent == 1:
             daily1.juexing()
         elif agent == 2:
@@ -122,8 +102,8 @@ if __name__ == '__main__':
     #yys_1 = yys_1[0]
     #hwnd1 = yys_1[0]
     # 多开
-    #yys_2 = [(hwnd2, title) for hwnd2, title in winlist if '阴阳师-网易游戏' in title]
-    #yys_3 = [(hwnd3, title) for hwnd3, title in winlist if '[#] 阴阳师-网易游戏 [#]' in title]
+    yys_2 = [(hwnd2, title) for hwnd2, title in winlist if '阴阳师-网易游戏' in title]
+    yys_3 = [(hwnd3, title) for hwnd3, title in winlist if '[#] 阴阳师-网易游戏 [#]' in title]
     if not yys_1 == []:
         sandbox = yys_1[0]
         hwnd1 = sandbox[0]
@@ -166,10 +146,8 @@ if __name__ == '__main__':
     3 魂土司机
     4 魂土打手
     5 双开魂土
-    6 双开困28
-    7 三开魂土
-    8 御灵
-    9 觉醒
+    6 御灵
+    7 觉醒
     ''')
     raw = input("\n选择功能模式:")
     # An application cannot force a window to the foreground while the user is working with another window.
